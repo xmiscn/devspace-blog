@@ -1,11 +1,5 @@
-import Layout from '../../components/Layout';
+import { getStaticProps } from './page/[page_index]';
+import BlogPage from './page/[page_index]';
 
-function BlogPage() {
-  return (
-    <Layout>
-      <h1>Blog</h1>
-    </Layout>
-  );
-}
-
+export { getStaticProps };
 export default BlogPage;
