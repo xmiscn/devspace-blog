@@ -1,20 +1,29 @@
-import Layout from '@/components/Layout';
-import Post from '@/components/Post';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { getPosts } from '@/lib/post';
+import Layout from '@/components/Layout';
+import Post from '@/components/Post';
+import CategoryList from '@/components/CategoryList';
 
-export default function CategoryBlogPage({ posts, categoryName }) {
+export default function CategoryBlogPage({ posts, categoryName, categories }) {
   return (
     <Layout>
-      <h1 className='text-5xl border-b-4 p-5 font-bold'>
-        Posts in Category: {categoryName.toUpperCase()}
-      </h1>
-      <div className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5'>
-        {posts.map((post, index) => (
-          <Post key={index} post={post} />
-        ))}
+      <div className='flex justify-between flex-col md:flex-row'>
+        <div className='w-3/4 mr-10'>
+          <h1 className='text-5xl border-b-4 p-5 font-bold'>
+            Posts in Category: {categoryName.toUpperCase()}
+          </h1>
+
+          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-5'>
+            {posts.map((post, index) => (
+              <Post key={index} post={post} />
+            ))}
+          </div>
+        </div>
+        <div className='w-1/4 ml-4'>
+          <CategoryList categories={categories} />
+        </div>
       </div>
     </Layout>
   );
