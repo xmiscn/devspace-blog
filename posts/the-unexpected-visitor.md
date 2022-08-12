@@ -2,7 +2,7 @@
 title: 'The unexpected Visitor'
 date: 'August 12, 2022'
 excerpt: 'a friend comes to visit me but it turns out, nothing is as it looked like'
-cover_image: '/images/posts/nico 24061.png'
+cover_image: '/images/posts/nico24061.png'
 category: 'Slaves'
 author: 'Michael Sell'
 author_image: 'https://randomuser.me/api/portraits/men/42.jpg'
