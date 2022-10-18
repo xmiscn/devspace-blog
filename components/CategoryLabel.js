@@ -5,9 +5,12 @@ export default function CategoryLabel({ children }) {
     JavaScript: 'yellow',
     CSS: 'blue',
     Python: 'green',
-    PHP: 'purple',
+    axios: 'purple',
     React: 'gray',
     Ruby: 'red',
+    Git: 'cornflowerblue',
+    Algorithms: 'teal',
+    AI: 'lime',
   };
 
   const bgColor = colorKey[children] || 'gray';
